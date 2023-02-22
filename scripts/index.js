@@ -28,13 +28,6 @@ const updateUI = (data) => {
   if (card.classList.contains("d-none")) card.classList.remove("d-none");
 };
 
-const updateCity = async (city) => {
-  const cityDetails = await getCity(city);
-  const weather = await getWeather(cityDetails.Key);
-
-  return { cityDetails, weather };
-};
-
 cityForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
